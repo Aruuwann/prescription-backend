@@ -1,6 +1,6 @@
 fastapi
 uvicorn
+python-multipart
 pillow
-pytesseract
 googletrans==4.0.0-rc1
-gtts
+pyttsx3
