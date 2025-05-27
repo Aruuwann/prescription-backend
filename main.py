@@ -11,6 +11,10 @@ import uuid
 app = FastAPI()
 translator = Translator()
 
+@app.get("/")
+async def root():
+    return {"message": "API is running"}
+
 @app.post("/process-prescription/")
 async def process_prescription(file: UploadFile = File(...), target_lang: str = "hi"):
     contents = await file.read()
